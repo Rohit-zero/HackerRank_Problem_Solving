@@ -1,0 +1,24 @@
+public static void levelOrder(Node root) {
+      if(root==null)
+      {
+          return;
+      }
+      LinkedList<Node>arr=new LinkedList<>();
+      arr.add(root);
+      while(!arr.isEmpty())
+      {
+          Node temp=arr.poll();
+          System.out.print(temp.data +" ");
+          if(temp.left !=null)
+          {
+              arr.add(temp.left);
+          }
+          if(temp.right != null)
+          {
+              arr.add(temp.right);
+          }
+          
+      }
+      
+      
+    }
