@@ -1,0 +1,17 @@
+public static int getNode(SinglyLinkedListNode llist, int positionFromTail) {
+    // Write your code here
+    SinglyLinkedListNode fast = llist;
+        SinglyLinkedListNode slow = llist;
+        
+        int pos = 0;
+        while (pos < positionFromTail) {
+            fast = fast.next;
+            pos++;
+        }
+        while (fast.next!=null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow.data;
+    }
