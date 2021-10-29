@@ -1,0 +1,22 @@
+public static long arrayManipulation(int n, int[][] queries) {
+    long[] arr = new long[n];
+    for (int i=0;i<queries.length;i++) {
+      int a=queries[i][0]-1;
+      int b=queries[i][1]-1;
+      int c=queries[i][2];
+
+      arr[a]=arr[a]+c;
+      if(b+1<n)
+      {
+        arr[b+1]=arr[b+1]-c;
+      }
+    }
+    long max=0;
+    long sum=0;
+    for(int i=0;i<n;i++) {
+      sum +=arr[i];
+      max=Math.max(max, sum);
+    }
+
+    return max;
+  }
