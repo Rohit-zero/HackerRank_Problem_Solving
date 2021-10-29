@@ -1,0 +1,9 @@
+static void printLinkedList(SinglyLinkedListNode head) {
+        SinglyLinkedListNode temp=head;
+        while(temp.next !=null)
+        {
+            System.out.println(temp.data);
+            temp =temp.next;
+        }
+        System.out.println(temp.data);
+    }
